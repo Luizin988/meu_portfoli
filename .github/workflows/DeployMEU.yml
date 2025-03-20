@@ -1,0 +1,25 @@
+name: DeployMEU para paginas do Github
+
+on:
+  push:
+    branches: 
+          - main 
+permissions:
+contents: write
+pages: write
+id-token: write
+
+jobs:
+   deploy:
+       runs-on: ubuntu-lstest
+
+       steps:
+       - name: Checkout do repositorio
+       uses: actions/configure-pages@v5
+
+        - name: Criar artefatos para DeployMEU
+       uses: actions/upload-pages-artifact@v2
+       with:
+        path: .
+      - name: Publicar no Git Hub Pages
+        uses: actions/deploy-pages2v4
