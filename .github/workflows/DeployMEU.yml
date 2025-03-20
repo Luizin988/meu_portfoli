@@ -18,13 +18,10 @@ jobs:
       - name: Checkout do repositório
         uses: actions/checkout@v2
         
-      - name: Configurar GitHub Pages
-        uses: actions/configure-pages@v5
-
       - name: Criar artefatos para DeployMEU
         uses: actions/upload-pages-artifact@v2
         with:
           path: .
-
+        
       - name: Publicar no GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v3
