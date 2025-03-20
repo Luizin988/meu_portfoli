@@ -25,3 +25,4 @@ jobs:
         
       - name: Publicar no GitHub Pages
         uses: actions/deploy-pages@v3
+        
